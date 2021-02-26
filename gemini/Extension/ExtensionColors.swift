@@ -67,5 +67,5 @@ struct Color {
     static let lime = UIColor(0xC6FF00)
     static let yellow = UIColor(0xFFEA00)
     static let orange = UIColor(0xFF9100)
-    static let charcoal = UIColor(0x111111)
+    static let charcoal = UIColor(0x131313)
 }

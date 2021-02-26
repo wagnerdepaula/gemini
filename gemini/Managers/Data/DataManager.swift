@@ -16,7 +16,6 @@ public class DataManager: NSObject {
     static var address: Address = Address()
     static var transactionItems: [TransactionItem] = []
     
-    
     public lazy var session: URLSession = {
         return URLSession(configuration: .default, delegate: nil, delegateQueue: nil)
     }()

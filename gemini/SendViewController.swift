@@ -90,7 +90,7 @@ class SendViewController: UIViewController {
     }()
     
     private lazy var sendButton: Button = {
-        let sendButton = Button(title: "Send", action: self.send)
+        let sendButton = Button(title: "Send", action: self.sendCoins)
         sendButton.translatesAutoresizingMaskIntoConstraints = false
         return sendButton
     }()
@@ -156,32 +156,28 @@ class SendViewController: UIViewController {
         }
     }
     
-    private func send() {
+    private func sendCoins() {
         guard let amount: String = amountField.text else { return }
         guard let address: String = addressField.text else { return }
+        let amountNum: CGFloat = CGFloat((amount as NSString).doubleValue)
         
-        if amount.isEmpty {
+        if amount.isEmpty || amountNum == 0 {
             showAlert(message: "Please enter an amount")
         } else if address.isEmpty{
             showAlert(message: "Please enter an address")
         } else if address == DataManager.addressName {
             showAlert(message: "You can't send jobcoins to yourself!")
         } else {
-            sendCoins()
-        }
-    }
-    
-    @objc private func sendCoins() {
-        guard let amount: String = amountField.text else { return }
-        guard let address: String = addressField.text else { return }
-        DataManager.shared.sendCoins(toAddress: address, amount: amount) {response in
-            if response.status == nil {
-                self.showAlert(message: response.error ?? "Something went wrong")
-            } else {
-                self.complete()
+            DataManager.shared.sendCoins(toAddress: address, amount: amount) {response in
+                if response.status == nil {
+                    self.showAlert(message: response.error ?? "Something went wrong")
+                } else {
+                    self.complete()
+                }
             }
         }
     }
+
     
     private func setupFields() {
         let tap = UITapGestureRecognizer(target: self, action: #selector(done))

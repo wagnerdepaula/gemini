@@ -144,7 +144,7 @@ final class Header: UITableViewHeaderFooterView {
         DispatchQueue.main.async {
             CATransaction.begin()
             CATransaction.setAnimationTimingFunction(CAMediaTimingFunction(controlPoints: 0.8, 0, 0.25, 0.99))
-            UIView.animate(withDuration: 2, delay: 0, options: [.curveLinear, .allowUserInteraction], animations: {
+            UIView.animate(withDuration: 2.5, delay: 0, options: [.curveLinear, .allowUserInteraction], animations: {
                 self.scrollView.contentOffset.x = xPos
             }, completion: nil)
             CATransaction.commit()
@@ -155,7 +155,7 @@ final class Header: UITableViewHeaderFooterView {
     private func setupBars() {
         for (index, dataPoint) in dataPoints.enumerated() {
             
-            let delay: Double = Double(index) * 0.1
+            let delay: Double = Double(index) * 0.05
             let color: UIColor = Color.cyan
             let height: CGFloat =  dataPoint.y
             let x: CGFloat = dataPoint.x
@@ -186,7 +186,7 @@ final class Header: UITableViewHeaderFooterView {
         for index in 0..<balances.count {
             
             let dataPoint: CGPoint = dataPoints[index]
-            let delay: Double = Double(index) * 0.1
+            let delay: Double = Double(index) * 0.05
             let color: UIColor = Color.primary
             let height: CGFloat =  dataPoint.y
             let y: CGFloat = scrollView.frame.height - height
