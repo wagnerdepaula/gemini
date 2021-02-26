@@ -22,6 +22,7 @@ final class TransactionsViewController: UIViewController {
         tableView.isOpaque = true
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.alpha = 0
         tableView.delaysContentTouches = false
         tableView.showsVerticalScrollIndicator = false
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -54,10 +55,19 @@ final class TransactionsViewController: UIViewController {
         navigationItem.title = ""
     }
     
+    private func setupView() {
+        view.isOpaque = true
+        view.backgroundColor = Color.background
+        view.addSubview(tableView)
+        view.addSubview(footer)
+    }
+    
     public func updateData() {
+        self.tableView.alpha = 0
         DataManager.shared.getTransactions(for: DataManager.addressName) {
             self.transactions = DataManager.address.transactions.sorted {$0.timestamp > $1.timestamp}
             self.address = DataManager.address
+            self.tableView.fadeIn()
             self.tableView.reloadData()
         }
     }
@@ -76,15 +86,6 @@ final class TransactionsViewController: UIViewController {
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
     
-    @objc private func logOut() {
-        NavigationViewController.shared.navigateBackToLogin()
-    }
-    
-    private func setupView() {
-        view.addSubview(tableView)
-        view.addSubview(footer)
-    }
-    
     private func setupLayout() {
         NSLayoutConstraint.activate([
             tableView.topAnchor.constraint(equalTo: view.topAnchor),
@@ -97,6 +98,10 @@ final class TransactionsViewController: UIViewController {
             footer.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             footer.bottomAnchor.constraint(equalTo: view.bottomAnchor),
         ])
+    }
+    
+    @objc private func logOut() {
+        NavigationViewController.shared.navigateBackToLogin()
     }
 }
 

@@ -22,6 +22,12 @@ extension UIView {
         })
     }
     
+    public func fadeIn() {
+        UIView.animate(withDuration: 0.5, delay: 0, options: [.allowUserInteraction], animations: {
+            self.alpha = 1
+        })
+    }
+    
     private func generateConfetti() -> [CAEmitterCell] {
         
         var cells:[CAEmitterCell] = [CAEmitterCell]()

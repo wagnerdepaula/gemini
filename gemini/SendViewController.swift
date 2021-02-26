@@ -149,6 +149,18 @@ class SendViewController: UIViewController {
         stackView.setCustomSpacing(60, after: addressField)
     }
     
+    private func resetStackView() {
+        for view in stackView.subviews {
+            view.removeFromSuperview()
+        }
+    }
+    
+    private func setupFields() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+        view.addGestureRecognizer(tap)
+        sendButton.isHidden = false
+    }
+    
     private func showAlert(message: String) {
         DispatchQueue.main.async {
             self.alert.message = message
@@ -177,22 +189,9 @@ class SendViewController: UIViewController {
             }
         }
     }
-
     
-    private func setupFields() {
-        let tap = UITapGestureRecognizer(target: self, action: #selector(done))
-        view.addGestureRecognizer(tap)
-        sendButton.isHidden = false
-    }
-    
-    @objc private func done() {
+    @objc private func hideKeyboard() {
         view.endEditing(true)
-    }
-    
-    private func resetStackView() {
-        for view in stackView.subviews {
-            view.removeFromSuperview()
-        }
     }
     
     private func complete() {
