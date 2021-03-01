@@ -38,9 +38,9 @@ This will be tracked via the graph and balance
 
 
 <div>
-    <img src="https://github.com/wagnerdepaula/gemini/login.png?raw=true" width="300" />
-    <img src="https://github.com/wagnerdepaula/gemini/dashboard.png?raw=true" width="300" />
-    <img src="https://github.com/wagnerdepaula/gemini/send.png?raw=true" width="300" />
-    <img src="https://github.com/wagnerdepaula/gemini/complete.png?raw=true" width="300" />
+    <img src="https://github.com/wagnerdepaula/gemini/blob/master/login.png?raw=true" width="300" />
+    <img src="https://github.com/wagnerdepaula/gemini/blob/master/dashboard.png?raw=true" width="300" />
+    <img src="https://github.com/wagnerdepaula/gemini/blob/master/send.png?raw=true" width="300" />
+    <img src="https://github.com/wagnerdepaula/gemini/blob/master/complete.png?raw=true" width="300" />
 </div>
 
