@@ -34,3 +34,13 @@ Assumptions
 User can send to any address (any string of text)
 This will be tracked via the graph and balance
 
+
+
+
+<div>
+    <img src="https://github.com/wagnerdepaula/gemini/login.png?raw=true" width="300" />
+    <img src="https://github.com/wagnerdepaula/gemini/dashboard.png?raw=true" width="300" />
+    <img src="https://github.com/wagnerdepaula/gemini/send.png?raw=true" width="300" />
+    <img src="https://github.com/wagnerdepaula/gemini/complete.png?raw=true" width="300" />
+</div>
+
