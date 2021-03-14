@@ -41,6 +41,5 @@ This will be tracked via the graph and balance
     <img src="https://github.com/wagnerdepaula/gemini/blob/master/login.png?raw=true" width="275" />
     <img src="https://github.com/wagnerdepaula/gemini/blob/master/dashboard.png?raw=true" width="275" />
     <img src="https://github.com/wagnerdepaula/gemini/blob/master/send.png?raw=true" width="275" />
-    <img src="https://github.com/wagnerdepaula/gemini/blob/master/complete.png?raw=true" width="275" />
 </div>
 
