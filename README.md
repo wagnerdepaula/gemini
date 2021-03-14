@@ -36,10 +36,11 @@ This will be tracked via the graph and balance
 
 
 
+<h2>Log In</h2>
+<img src="https://github.com/wagnerdepaula/gemini/blob/master/login.png?raw=true" width="375" style="border:1px solid #eee"><br>
+<h2>Dashboard</h2>
+<img src="https://github.com/wagnerdepaula/gemini/blob/master/dashboard.png?raw=true" width="375" style="border:1px solid #eee"><br>
+<h2>Send Jobcoins</h2>
+<img src="https://github.com/wagnerdepaula/gemini/blob/master/send.png?raw=true" width="375" style="border:1px solid #eee">
 
-<div>
-    <img src="https://github.com/wagnerdepaula/gemini/blob/master/login.png?raw=true" width="330" />
-    <img src="https://github.com/wagnerdepaula/gemini/blob/master/dashboard.png?raw=true" width="330" />
-    <img src="https://github.com/wagnerdepaula/gemini/blob/master/send.png?raw=true" width="330" />
-</div>
 
